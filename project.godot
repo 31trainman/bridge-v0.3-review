@@ -1,0 +1,12 @@
+; Added review harness; original implementation scripts are unchanged.
+config_version=5
+
+[application]
+config/name="Bridge v0.3 Review"
+
+[autoload]
+Forge="*res://forge.gd"
+Bridge="*res://bridge.gd"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"

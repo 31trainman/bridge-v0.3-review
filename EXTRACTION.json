@@ -1,0 +1,22 @@
+{
+  "original": "docs/Bridge-v0.3-Corrected-Implementation.md",
+  "extracted": [
+    {
+      "gdscript_fence_index": 1,
+      "sha256": "6242f1e16bae6601baa308840a79e23f5c5daa7670b73d0c4d590afb0f741365",
+      "path": "forge.gd"
+    },
+    {
+      "gdscript_fence_index": 2,
+      "sha256": "fa5d4bc6f1706278a954d416d8a09ced1c76b11604dc90a47a4c0e8a6fb6c9af",
+      "path": "bridge.gd"
+    },
+    {
+      "gdscript_fence_index": 3,
+      "sha256": "f1f66ed030afba00b2b5f4f9202fe6ffcb5888e4e52758f614369c549d2a364c",
+      "path": "tests/test_forge.gd"
+    }
+  ],
+  "method": "Exact fenced block contents; original whitespace and line endings retained.",
+  "original_sha256": "de549fcbbb66b1ac2a4fae2c536ecaec86ab5c0d37e1e57e6163040896c4a221"
+}

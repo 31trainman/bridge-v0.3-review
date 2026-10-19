@@ -1,0 +1,10 @@
+{
+  "provenance": "New review fixtures; not supplied by the original v0.3 author. Static predictions, not executed results.",
+  "cases": [
+    {"id":"valid-position-array", "command":{"action":"forge_asset","name":"p1","recipe":"pillar","params":{"height":2,"radius":0.5,"glow_color":"cyan"},"pos":[50,0,50]},"expected_contract":{"ok":true},"predicted_current":{"ok":false,"reason":"invalid or non-finite position"}},
+    {"id":"allowlist", "command":{"action":"execute_shell","cmd":"echo review"},"expected_contract":{"ok":false,"reason":"unrecognized action"},"predicted_current":{"ok":false,"reason":"unrecognized action"}},
+    {"id":"invalid-params-type", "command":{"action":"forge_asset","name":"p2","recipe":"pillar","params":null,"pos":[50,0,50]},"expected_contract":{"ok":false},"predicted_current_note":"Position rejection occurs first; independently review null params through native Vector3 invocation to expose the typed validation boundary."},
+    {"id":"modify-position-array", "precondition":"Create p1 through a direct Forge method with native Vector3 first.","command":{"action":"forge_modify","name":"p1","params":{"height":6},"pos":[60,0,60]},"expected_contract":{"ok":true},"predicted_current_note":"Array is assigned to typed Vector3 before validation; script error expected."},
+    {"id":"invalid-json", "wire_line":"not json\n", "expected_contract":{"ok":false,"reason":"invalid JSON"},"predicted_current":{"ok":false,"reason":"invalid JSON"}}
+  ]
+}
